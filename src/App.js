@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Countries from 'countries-api/lib/data/Countries.json';
 import './App.css';
-import Pagination from "./components/Pagination";
+import PaginationBasic from "./components/PaginationBasic";
 import CountryCard from './components/CountryCard';
 class App extends Component {
   state = {
@@ -62,10 +62,10 @@ class App extends Component {
               )}
             </div>
             <div className="d-flex flex-row py-4 align-items-center">
-              <Pagination
+              <PaginationBasic
                 totalRecords={totalCountries}
-                pageLimit={18}
-                pageNeighbours={1}
+                pageLimit={30}
+                pageNeighbours={5}
                 onPageChanged={this.onPageChanged}
               />
             </div>
